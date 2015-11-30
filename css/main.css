@@ -1,0 +1,33 @@
+body {
+	background: #DEB887;
+	color: #000;
+	max-width: 640px;
+	float: center;
+	font-family: Bitter, Cambria, serif;
+	font-size: 100%;
+	margin: auto; 
+	padding: 1em;
+	}
+
+ img {
+	max-width: 100%;
+	}
+
+ h1 {
+	margin: 0;
+	font-family: Oswald, Calibri, sans-serif;
+	text-align: center;
+	}
+ 
+@media (max-width: 1024px) {
+	 body { margin: 0; }
+	}
+	
+@media (max-width: 768px) {
+	body { margin: 0; }
+	}
+
+@media (max-width: 320px) {
+	body { margin: 0; }
+	}
+	
