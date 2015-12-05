@@ -1,7 +1,7 @@
 body {
-	background: #DEB887;
+	background: #FFFFAB;
 	color: #000;
-	max-width: 640px;
+	max-width: auto;
 	float: center;
 	font-family: Bitter, Cambria, serif;
 	font-size: 100%;
@@ -9,6 +9,16 @@ body {
 	padding: 1em;
 	}
 
+.container {
+	float: center;
+}
+
+#map {
+	float: center;
+	max-width: 700px;
+	margin: auto
+}
+	
  img {
 	max-width: 100%;
 	}
@@ -18,16 +28,4 @@ body {
 	font-family: Oswald, Calibri, sans-serif;
 	text-align: center;
 	}
- 
-@media (max-width: 1024px) {
-	 body { margin: 0; }
-	}
-	
-@media (max-width: 768px) {
-	body { margin: 0; }
-	}
 
-@media (max-width: 320px) {
-	body { margin: 0; }
-	}
-	
