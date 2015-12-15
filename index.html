@@ -5,41 +5,260 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- leaflet mobile new meta viewport -->
+	<!-- new <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
 	<title>Map of the U.S. and State Flowers</title>
-	<link href='https://fonts.googleapis.com/css?family=Bitter|Oswald' rel='stylesheet' type='text/css'>
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<link rel="stylesheet"  href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
-   </head>
+	<link rel="stylesheet" href="css/newcss.css">
 
-   <!--  CSS given   <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" /> -->
+	
+</head>
+
 <body>
 
-<div class = "navbar navbar-default navbar-static-top">
-	<div class = "container">
-		<a href = "#" class = "navbar-brand">State Flowers</a>
-		
-		<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
-		H
-		</button>
-		
-		
-		<div class = "collapse navbar-collapse navHeaderCollapse">
-			<ul class = "nav navbar-nav navbar-right">
-			
-				<li><a href = "#">Home</a></li>
-			
-			</ul>
-		</div>
-		
-</div>
-</div>
-<h1>Click a State and See Its Flower</h1>
-<div id="map">
-		<iframe src="http://createaclickablemap.com/map.php?&id=42578&online=true" width="600" height="350" style="border: none;"></iframe>
-		<script>if (window.addEventListener){ window.addEventListener("message", function(event) { if(event.data.length >= 22) { if( event.data.substr(0, 22) == "__MM-LOCATION.REDIRECT") location = event.data.substr(22); } }, false); } else if (window.attachEvent){ window.attachEvent("message", function(event) { if( event.data.length >= 22) { if ( event.data.substr(0, 22) == "__MM-LOCATION.REDIRECT") location = event.data.substr(22); } }, false); } </script>
-</div>
+	<div class="navbar navbar-default navbar-static-top">
 	
+		<div class="container">
+		
+		<div class="navbar-header">
+		
+			<a href="#" class="navbar-brand">The United State of Flowers</a>
+			
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+		</div>
+			
+			<div class="collapse navbar-collapse navHeaderCollapse">
+			
+			<ul class="nav navbar-nav navbar-right">
+			
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="https://en.wikipedia.org/wiki/List_of_U.S._state_flowers">List of States and Flowers</a></li>
+				<li><a href="http://www.statesymbolsusa.org/symbol-official-item/florida/state-flower/orange-blossom">Florida's Spotlight</a></li>
+				<li><a href="#contact" data-toggle= "modal">Flower Feedback</a></li>
+				<li><a href="https://twitter.com/isabellaalsina">Follow Me on Twitter</a></li>
+							
+			</ul>
+			
+			</div>
+		</div>
+	</div>
+	
+	
+	<div id="map">
+
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<h3>The California Poppy</h3>
+				<img src="images/CaliforniaFlower.jpg" alt="The California Poppy">
+				<p>California's state flower has many nicknames, including the California Poppy and the Golden Poppy. These beautiful flowers adorn California's rolling hills. It's one of the earliest wild flowers to grow in gardens. Every year on April 6th, California Poppy Day is celebrated.</p>
+			</div>
+			
+			<div class="col-md-3">
+				<h3>Kentucky's Goldenrod</h3>
+				<img src="images/KentuckyFlower.jpg" alt="The Goldenrod">
+				<p>The goldenrod was named Kentucky's official state flower in 1926. The goldenrod has clusters of bright yellow flowers. It was used for medicinal purposes, like kidney stones and bladder infections, for centuries. Its genus name is Solidago.</p>
+			</div>
+			
+			<div class="col-md-3">
+				<h3>Louisiana's Magnolia</h3>
+				<img src="images/LouisianaFlower.jpg" alt="The Magnolia">
+				<p>The magnolia was named Louisiana's state flower in 1900. The tree grows in the southeastern U.S. and is also called the evergreen magnolia. This could be attested it its leathery, evergreen leaves.</p>
+			</div>
+			
+			<div class="col-md-3">
+				<h3>New York's Big Rose</h3>
+				<img src="images/NewYorkFlower.jpg" alt="The Magnolia">
+				<p>The rose is a very common flower, given on holidays like Valentine's Day or sold at almost any place flowers are sold. But it is special to New York because it was designated as the official state flower in 1955. It serves as a symbol of love and beauty. The rose is also the United States's official flower.</p>
+			</div>	
+		</div>
+	</div>		
+
+<div class="navbar navbar-default navbar-static-bottom">
+	
+		<div class="container">
+		
+			<div class="navbar-header">
+		
+			<a href="http://www.wikipedia.com" class="navbar-brand">Site created by Isabella Alsina. Information and pictures found on Wikipedia.</a>
+			
+			</div>
+		</div>
+</div>			
+
+<!-- Modal form -->
+
+<div class="modal fade" id="contact" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3>Flower Feedback: Do You Like Your State's Flower?</h3>
+			</div>
+			<div class="modal-body">
+			
+			<form class="form-horizontal" method="post" action="index.php">
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="message" class="col-sm-2 control-label">Message</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="4" name="message"></textarea>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary pull-right" data-dismiss="modal">
+        </div>
+    </div>
+	
+</form>
+			
+			</div>
+		</div>
+	</div>
+</div>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/places.json"></script>	
+<script src="js/us-states.js"></script>
+<script src="js/newjs.js"></script>
+
+<!-- new script json with popups -->
+
+<script> 
+
+var mapboxAccessToken = "pk.eyJ1IjoiaWFsc2luYTMzIiwiYSI6ImNpaTF5MGpmNDAwaGN0cm0waGxtY3B1ZnIifQ.cBdQrRDckQgFU_mzNE43YA";
+var map = L.map('map').setView([37.8, -96], 4);
+
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, {
+    id: 'mapbox.light',
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+	maxZoom: 18,
+	minZoom: 4,
+}).addTo(map);
+
+L.geoJson(statesData).addTo(map);
+
+<!-- changing icon to make it smaller -->
+
+var myURL = jQuery( 'script[src$="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"]' ).attr( 'src' ).replace( 'http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js', '' );
+ 
+var myIcon = L.icon({
+    iconUrl: myURL + 'images/pin24.png',
+    iconRetinaUrl: myURL + 'images/pin48.png',
+    iconSize: [29, 24],
+    iconAnchor: [9, 21],
+    popupAnchor: [0, -14]
+});
+
+<!-- for loop for markers with JSON -->
+
+for ( var i=0; i < places.length; ++i ) {
+	L.marker( [places[i].latitude, places[i].longitude], {icon: myIcon} )
+	.bindPopup( '<div id="popupBox">' + '<h4>' + places[i].flowerName + '</h4>' + '<img src="' + places[i].pathtoflowerphoto + '" alt="' + places[i].flowerName + '" ' + 'height="100%" width="100%">' + '<p>' + places[i].description + '</p>' + '</div>' )
+	.addTo( map ); }
+	
+<!-- function style to color map -->
+
+function getColor(d) {
+    return 
+          '#325C74';
+}
+
+function style(feature) {
+    return {
+        fillColor: getColor(feature.properties.density),
+        weight: 2,
+        opacity: 1,
+        color: '#B4CDCD',
+        fillOpacity: 0.2
+    };
+}
+
+L.geoJson(statesData, {style: style}).addTo(map);
+
+<!-- box at the top for states -->
+
+var info = L.control();
+
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info');
+    this.update();
+    return this._div;
+};
+
+info.update = function (props) {
+    this._div.innerHTML = '<h3>U.S. Flowers</h3>' +  (props ?
+        '<b>' + props.name + '</b><br />' + ''
+        : 'Click on a marker!');
+};
+
+info.addTo(map);
+
+<!-- choro tutorial interactivity -->
+
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 5,
+        color: '#b60808',
+        fillOpacity: 0.5
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera) {
+        layer.bringToFront();
+	}
+	info.update(layer.feature.properties);
+}
+
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+	info.update();
+}
+
+function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+}
+
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+    });
+}
+
+geojson = L.geoJson(statesData, {
+    style: style,
+    onEachFeature: onEachFeature
+}).addTo(map);
+	
+</script>
+
+<!-- how to link the image <img src="images/AlabamaFlower.jpg" alt="Flower"> -->
+
 </body>
+
 </html>
